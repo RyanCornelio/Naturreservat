@@ -8,30 +8,15 @@
 </head>
 <body>
 
-  <h2>Välkommen till Naturreservatet:</h2>
+  <h2>Välkommen till Naturreservatet: Välj hur många djur du vill se ( Max 5 per kategori) </h2>
   <form action="./result.php" method="post">
   <input placeholder="Number of rhinos" type="text" name="rhino">
   <input placeholder="Number of zebras" type="text" name="zebra">
-  <input placeholder="Number of Pandas" type="text" name="panda">
+  <input placeholder="Number of pandas" type="text" name="panda">
+  <input placeholder="Number of coconuts" type="text" name="coconut">
   <button type="submit">Enter</button>
   </form>
 
-  <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-  Name: <input type="text" name="fname">
-  <input type="submit">
-</form>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // collect value of input field
-  $name = $_POST['fname'];
-  if (empty($name)) {
-    echo "Name is empty";
-  } else {
-    echo $name;
-  }
-}
-?>
 
 </body>
 </html>
